@@ -1,0 +1,45 @@
+<div class="todos"> 
+    <form (submit)="addTodo()">
+        <input
+         type="text"
+         name="inputTodo"
+         placeholder="Enter todo..."
+         class="todo-input"
+         [(ngModel)]="inputTodo"
+        />
+        <input type="submit" value="Add Todo" class="todo-submit" />
+    </form>
+    <div *ngFor="let todo of todos; let i = index;" class="todo {{ (todo.completed ? 'done' : '') }}">
+        <div class="id">{{ i }}</div>
+        <div class="content" (click)="toggleDone(i)">{{ todo.content }}</div>
+        <button class="delete" (click)="deleteTodo(i)">Remove</button>
+    </div>
+    <div *ngFor="let person of persons; let i = index;" class="person">
+        <div class="id">{{ i }}</div>
+        <div class="content" (click)="toggleDone(i)">FIRSTNAME: {{ person.firstName }}, {{ person.lastName }}, {{ person.age }}, {{ person.origin }}, {{ person.phoneNumber }}</div>
+    </div>
+    <!-- <div *ngFor="let fruit of fruits;" class="fruits">
+        <div> {{ fruit }}</div>
+    </div> -->
+
+    <br>
+    <table>
+        <thead>
+            <th>First Name</th>
+          <th>Age</th>
+          <th>Origin</th>
+          <th>Delete</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of persons">
+            <td>{{person.firstName}}</td>
+            <td>{{person.age}}</td>
+            <td>{{person.origin}}</td>
+            <td><button class="dlt" (click)="removePerson(person)">Delete</button></td>
+          </tr>
+
+        </tbody>
+       
+      </table>
+      
+</div> 
