@@ -12,8 +12,6 @@ export class TodosComponent implements OnInit {
   todos: Todo[] = [];
 
   persons: Person[] = [];
-
-  // fruits: string[] = ['Apple', 'Orange', 'Banana'];
   
   inputTodo:string = "";
   constructor() { }
@@ -37,24 +35,24 @@ export class TodosComponent implements OnInit {
     this.persons = [
       {
         firstName: "Giorgos",
-        lastName: "Anagnost",
+        lastName: "Iliopoulos",
         age: "30",
         origin: "Greek",
-        phoneNumber: "6982825945"
+        phoneNumber: "697458975"
       },
       {
-          firstName: "Sevasti",
-          lastName: "Gouland",
+          firstName: "Eleni",
+          lastName: "Makri",
           age: "27",
           origin: "Greek",
-          phoneNumber: "6984499854"
+          phoneNumber: "698874659"
         },
         {
-            firstName: "Loukia",
-            lastName: "Gouland",
+            firstName: "Andreas",
+            lastName: "Manios",
             age: "15",
-            origin: "Albanian",
-            phoneNumber: "6982825945"
+            origin: "Greek",
+            phoneNumber: "698297445"
           }
         
     ]
